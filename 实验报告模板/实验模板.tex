@@ -1,0 +1,63 @@
+\documentclass[12pt]{article}
+\usepackage{ctex}
+\usepackage[left=1.81cm, right=1.81cm, top=1.81cm, bottom=1.81cm]{geometry}
+\usepackage{amsmath, amsfonts, amssymb} % 数学公式、符号
+\usepackage{graphicx}   % 图片
+\usepackage{url}        % 超链接
+\usepackage{bm}         % 加粗方程字体
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{booktabs}
+\usepackage[T1]{fontenc}
+\usepackage{fancybox}
+\usepackage{wrapfig}
+\usepackage{multicol}
+\renewcommand{\thesection}{\zhnum{section}、}
+\renewcommand{\thesubsection}{\arabic{subsection}、}
+\newcommand*{\expname}{\large{实验名称}}
+\newcommand*{\name}{姓名}
+\newcommand*{\nianji}{年级}
+\newcommand*{\stdnum}{学号}
+\newcommand*{\expdate}{日期}
+\setlength{\parindent}{4em}
+\begin{document}
+\begin{center}
+	\kaishu\pmb{\Huge{武\ 汉\ 大\ 学\ 物\ 理\ 科\ 学\ 与\ 技\ 术\ 学\ 院}}\\
+	\kaishu\Huge{\pmb{物\ 理\ 实\ 验\ 报\ 告}}
+
+\end{center}
+\centering
+\renewcommand\arraystretch{1.5}
+\begin{tabular*}{\linewidth}{|m{1.81cm}<{\raggedright}|m{2.51cm}<{\raggedright}|m{1.31cm}<{\raggedright}|m{1.61cm}<{\raggedright}|m{1.31cm}<{\raggedright}|m{3.3cm}<{\raggedright}|m{1.31cm}<{\raggedright}|m{1.31cm}<{\raggedright}|}
+	\multicolumn{3}{r}{\large \heiti {物理科学与技术学院}}&\multicolumn{2}{r}{\large \heiti {物理学专业}}&\multicolumn{3}{r}{\large\heiti {\expdate}}\\
+	\hline
+	实验名称&\multicolumn{7}{l|}{\expname }\\
+	\hline
+	姓\ \ \  \ \  \ 名&\raggedright\name  &年\ \  \ 级 &\nianji &学\ \ \ 号& \stdnum &成\ \  绩 & \ \\
+	\hline
+	\multicolumn{8}{|l|}{
+		\begin{minipage}[h]{0.928\columnwidth}
+			\renewcommand\arraystretch{1}
+			\begin{tabular}{m{9cm}p{5cm}}
+				实验报告内容： &                      \\
+				一、实验目的 &               五、数据表格 \\
+				二、主要实验仪器 &          六、数据处理及结果表达 \\
+				三、实验原理 &            七、实验结果分析 \\
+				四、实验内容与步骤 &           八、习题 \\
+				\end{tabular}  
+		\end{minipage}
+	}\\
+	\hline
+	\multicolumn{8}{|c|}{
+		\begin{minipage}[h]{0.928\columnwidth}
+			\raggedright
+			{\include{page1}}
+	\end{minipage}}\\
+	\hline
+\end{tabular*}
+\renewcommand\arraystretch{1}
+\include{middle} 
+\include{end}%%%致谢
+\end{document}
