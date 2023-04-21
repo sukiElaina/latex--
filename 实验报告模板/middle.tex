@@ -1,15 +1,85 @@
 \fancypage{\fbox}{}
-第二，三页的东西.（可以自动换页）
+\subsubsection{幅频特性}
+根据上述$U_R,U_C$的表达式，当$\omega \rightarrow 0$时，$U_R\rightarrow 0,U_C\rightarrow U$；$U_R$随着$\omega$增大逐渐增大，$U_C$反之；当$\omega \rightarrow \infty$时，$U_R\rightarrow U,U_C\rightarrow 0$。
+\subsubsection{相频特性}
+当$\omega$很低时，$\varphi_R→+\pi/2$；当$\omega$很高时，$\varphi_R→0$，且$\varphi_C=|\varphi_R|-\pi/2$
+\subsubsection{等幅频率}
+\begin{wrapfigure}[6]{r}{0.3\textwidth} %比如{r}{0.5\textwidth}
+	\centering
+	\includegraphics[height=3cm,width=5cm]{figure/2.png}
+    \caption*{RL串联电路}
+\end{wrapfigure}
+当$R=1/(\omega C)$时，$U_R=U_C$，此时的频率为等幅频率，也叫截止频率
+\subsection{RL电路的幅频特性}
+RL的阻抗为$\tilde{Z}=R+j\omega L$,其模为$Z=|\tilde{Z}|=\sqrt{R^2+(\omega L)^2}$其他同RC电路
+\subsection{RLC串联电路}
+\begin{wrapfigure}[6]{r}{0.3\textwidth} %比如{r}{0.5\textwidth}
+	\centering
+	\includegraphics[height=3cm,width=5cm]{figure/3.png}
+    \caption*{RLC串联电路}
+\end{wrapfigure}
+该电路的总阻抗为$\tilde{Z}=R+j\left(\omega L-\dfrac{1}{\omega C}\right)$
 
+幅角：$\varphi=\arctan \dfrac{\omega L-\frac 1 {\omega C}}{R}$
 
-
-
-
-
-
-
-
-
-
-
-
+R上的电压为$U_R=\dfrac{U}{Z}R $
+\subsubsection{谐振频率}
+当$\omega L-\dfrac{1}{\omega C}=0$时，$\varphi=0$，并且$U_R=U$为极大值，此时的频率记为谐振频率$f_0=\dfrac{1}{2\pi\sqrt{LC}}$
+\subsubsection{相频特性}
+$\omega <\omega _0 $时，此时电路呈电容性；$\omega >\omega _0 $时，此时电路呈电感性；$\omega =\omega _0 $时，此时电路呈电阻性。
+\section{实验内容与步骤}
+\subsection{测量并绘制RC串联电路的幅频、相频曲线}
+\begin{enumerate}[(1)]
+    \item 连接电路，接通各个仪器电源进行预热
+    \item 调节信号源的$f=500Hz,U=3.0V_{RMS}=8.5Vpp$
+    \item 依次从电压表上测出R,C上的电压U，U,.从示波器的李萨如图形上读出x轴与  图形相交的水平距离$2x_0$和图形在x轴上的投影$2X$
+    \item 依次测出表格中其余$f$值条件下的$U_R,U_C$,和$\varphi$值.
+\end{enumerate}
+\subsection{测量并绘制RL串联电路的幅频、相频曲线}
+与上一步内容相似，将C替换为L
+\subsection{测量并绘制RLC串联电路的相频曲线}
+其测量电路与以上内容相仿,只是将串联LC代替原来的C即可
+\begin{enumerate}[(1)]
+    \item 用李萨如图形找出谐振频率
+    \item 测出f=350,600,700,780,900,1500Hz条件下的$\varphi$值
+\end{enumerate}
+\section{数据表格}
+\begin{table}[h]
+    \centering
+    \caption*{RC幅频，相频曲线}
+    \begin{tabular}[\linewidth]{|m{2cm}|m{2cm}|m{2cm}|m{2cm}|m{2cm}|m{2cm}|m{2cm}|}
+        \hline
+        \multicolumn{7}{|c|}{$U=3.0V_{RMS}=8.5Vpp$  $R=200\Omega $  $C=0.47\mu F$}\\
+        \hline
+        $f/Hz$ & 500 & 1200 & 1700 & 2000 & 3000 & 7000 \\
+        \hline
+        $U_R/V$ & & & & & & \\
+        \hline
+        $U_C/V$ & & & & & & \\
+        \hline
+        $2x_0/cm$ & & & & & & \\
+        \hline
+        $2X/cm$ & & & & & & \\
+        \hline
+        $\varphi/(^{\circ} )$ & & & & & & \\
+        \hline
+    \end{tabular}
+    \caption*{RL幅频，相频曲线}
+    \begin{tabular}[\linewidth]{|m{2cm}|m{2cm}|m{2cm}|m{2cm}|m{2cm}|m{2cm}|m{2cm}|}
+        \hline
+        \multicolumn{7}{|c|}{$U=3.0V_{RMS}=8.5Vpp$  $R=1000\Omega $  $L=0.1H$}\\
+        \hline
+        $f/Hz$ & 500 & 1200 & 1700 & 2000 & 3000 & 7000 \\
+        \hline
+        $U_R/V$ & & & & & & \\
+        \hline
+        $U_L/V$ & & & & & & \\
+        \hline
+        $2x_0/cm$ & & & & & & \\
+        \hline
+        $2X/cm$ & & & & & & \\
+        \hline
+        $\varphi/(^{\circ} )$ & & & & & & \\
+        \hline
+    \end{tabular}
+\end{table}
